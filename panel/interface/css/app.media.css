@@ -1,0 +1,58 @@
+@media (max-width: 500px) {
+	:root {
+		--header-top-height: 32px;
+		--header-left-width: 240px;
+	}
+
+	header.left-header { width: 90%; }
+	.appUiKit-table {
+		overflow: auto;
+	}
+	.appUiKit-table table {
+		min-width: 100%;
+	}
+
+	.appkit-form-contenaire .appUiKit-double-input .itemupload-image {
+		width: calc( 100% / 2);
+	}
+}
+
+@media (min-width: 900px) {
+	:root {
+		--header-top-height: 32px;
+		--header-left-width: 240px;
+		--marg-width-header: var(--header-left-width);
+	}
+
+	header.left-header {
+		left: 0;
+
+		transition: 0.2s;
+	}
+
+	.grid-global-stat {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr) auto;
+		grid-gap: 16px;
+	}
+
+	.grid-analytique {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 16px;
+	}
+
+	.appkit-form-contenaire .appUiKit-double-input .itemupload-image {
+		width: calc( 100% / 4 - 16px);
+	}
+
+	.appkit-form-contenaire .appUiKit-double-input.x4 .appKitUi-input {
+		width: calc( 100% / 4 - 16px);
+	}
+	.appkit-form-contenaire .appUiKit-double-input.x3 .appKitUi-input {
+		width: calc( 100% / 3 - 11px);
+	}
+	.appkit-form-contenaire .appUiKit-double-input.x2 .appKitUi-input {
+		width: calc( 100% / 2 - 8px);
+	}
+}

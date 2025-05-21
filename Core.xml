@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <database>
+        <host>127.0.0.1</host>
+        <username>root</username>
+        <password/>
+        <dbname>eiganoneko_bdd</dbname>
+    </database>
+    <template>
+        <title>Eiga No Neko - Straming d'animes en VO et VOST</title>
+        <folder>enn</folder>
+        <plugins>omsyPanel, omsyBlog, omsyPage, ennNode</plugins>
+    </template>
+    <security>
+        <eval>false</eval>
+        <exec>true</exec>
+        <system>false</system>
+        <passthru>false</passthru>
+    </security>
+    <server>
+        <privatekey/>
+        <update>https://static.floagg.com/publish-dev/</update>
+    </server>
+</configuration>

@@ -1,0 +1,13 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+RewriteBase "/"
+RewriteCond %{QUERY_STRING} ^%ad [NC] # Patch 0Day XWAMP
+RewriteRule .? – [F,L]
+RewriteCond "%{REQUEST_URI}" !=/index.php
+RewriteRule ^(.*)$ index.php [L,PT,QSA]
+
+
+<FilesMatch "Core.xml">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,323 @@
+:root {
+	--appUiKit-color-contenaire: red;
+}
+
+.appUiKit-form-grid {
+	display: grid;
+	grid-template-columns: 1fr 360px;
+	grid-gap: 8px;
+}
+
+.appUiKit-form-contenaire-color {
+	background-color: #fbfbfb;
+	border: solid 1px #ececec;
+}
+.appkit-form-contenaire .head {
+	padding: 16px;
+	
+	border-bottom: solid 1px #ececec;
+}
+.appkit-form-contenaire .head h2 {
+	font-size: 18px;
+	line-height: 1.3em;
+}
+.appkit-form-contenaire .content {
+	padding: 16px;
+}
+.appkit-form-contenaire .appUiKit-double-input {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.appkit-form-contenaire .appUiKit-double-input .appKitUi-input:nth-child(1) { margin-left: 0; }
+.appkit-form-contenaire .appUiKit-double-input .appKitUi-input {
+	margin-left: 16px;
+	width: 100%;
+}
+
+.appUiKit-marginTop { margin-top: 16px; }
+
+.appUiKit-table {
+	background-color: #fbfbfb;
+	border: solid 1px #ececec;
+
+	border-radius: 4px;
+
+	margin-top: 16px;
+}
+
+
+.appUiKit-user-top-menu {
+	background-color: #fbfbfb;
+	border: solid 1px #ececec;
+
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.appUiKit-user-top-menu .head {
+	padding: 16px 16px;
+}
+
+.appUiKit-user-top-menu ul {
+	list-style: none;
+
+	display: flex;
+	align-items: center;
+	padding: 16px 16px;
+	padding-top: 0;
+}
+
+.appUiKit-user-top-menu ul li:nth-child(1) { margin-left: 0; }
+.appUiKit-user-top-menu ul li { margin-left: 16px; }
+
+.appUiKit-user-top-menu ul li a {
+	text-decoration: none;
+	color: inherit;
+
+	display: block;
+
+	padding: 6px 8px;
+
+	border-radius: 4px;
+}
+
+.appUiKit-user-top-menu ul li a:hover {
+	background-color: #ececec;
+}
+
+.appUiKit-user-top-menu ul li a.active {
+	background-color: rgba(220, 220, 220);
+}
+
+
+
+
+/* */
+/* */
+.appUiKit-list-plug-card ul {
+	margin-top: 32px;
+
+	list-style: none;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 16px;
+}
+.appUiKit-card-plug {
+	background-color: #fbfbfb;
+	border: solid 1px #ececec;
+}
+
+.appUiKit-card-plug .top,
+.appUiKit-card-plug .bottom {
+	position: relative;
+
+	display: flex;
+
+	padding: 16px;
+}
+
+.appUiKit-card-plug.template-card-space .top {
+	padding: 0;
+}
+
+.appUiKit-card-plug .top .img {
+	margin-right: 16px;
+	flex: none;
+}
+
+.appUiKit-card-plug .top .img img {
+	width: 88px;
+	height: 88px;
+}
+
+.appUiKit-card-plug .top span.name {
+	font-size: 18px;
+	line-height: 1.3em;
+	font-weight: 600;
+}
+.appUiKit-card-plug .top p {
+	margin-top: 8px;
+}
+
+.appUiKit-card-plug .bottom {
+	justify-content: flex-end;
+}
+
+.appUiKit-card-plug a {
+	text-decoration: none;
+
+	display: block;
+
+	background: #234bd4;
+	color: #fff;
+	padding: 4px 12px;
+	border-radius: 4px;
+
+	cursor: pointer;
+
+	transition: 0.2s;
+}
+
+.appUiKit-card-plug.template-card-space .top .img {
+	width: 60%;
+}
+
+.appUiKit-card-plug.template-card-space .top .img img { height: 128px; width: 100%; object-fit: cover; }
+
+.appUiKit-card-plug.template-card-space .top .content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background: linear-gradient(-90deg, #fbfbfb 40%, transparent 100%);
+
+	text-align: right;
+
+	padding: 16px;
+}
+
+
+
+/* */
+.appKitUi-input {
+  padding: 12px 16px;
+  border: solid 1px rgba(200, 200, 200);
+  border-radius: 8px;
+}
+
+.appKitUi-input label {
+	margin-bottom: 4px;
+
+	display: block;
+
+	color: var(--color-secondary);
+	font-size: 12px;
+}
+
+.appKitUi-input textarea,
+.appKitUi-input select,
+.appKitUi-input input {
+	display: block;
+
+	width: 100%;
+
+	color: var(--color-secondary);
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.appKitUi-input textarea {
+	min-height: 200px;
+}
+
+.appKitUi-input select {
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.appKitUi-input textarea {
+	min-height: 200px;
+}
+
+.appKitUi-input select {
+
+	font-weight: 500;
+}
+
+.appKitUi-input select option { color: #000; }
+
+
+
+
+/* */
+table {
+	width: 100%;
+}
+
+table a {
+	text-decoration: none;
+	color: inherit;
+}
+
+table,
+table tr,
+table tr td {
+	border-collapse: collapse;
+}
+
+table tr,
+table tr td {
+	border: none;
+}
+
+table td {
+	padding: 4px 4px;
+}
+table td.avatar { width: 24px; border-radius:100%; }
+table td.avatar img { border-radius:100%; }
+
+table td.number {
+	width: auto;
+	text-align: center;
+}
+
+table td.image img,
+table td.image-2x div {
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+table td.image-2x div.flex-horiz {
+	display: flex;
+}
+
+table td.image { width: 122px; }
+table td.image-2x { width: 299px; }
+
+table ul {
+	list-style: none;
+
+	display: flex;
+
+	margin-top: 8px;
+}
+
+table ul li:nth-child(1) { margin-left: 0; }
+table ul li { margin-left: 16px; }
+
+
+
+
+
+/* */
+.appUiKit-block {
+	background-color: #fbfbfb;
+  border: solid 1px #ececec;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.appUiKit-block .head {
+	padding: 16px;
+  border-bottom: solid 1px #ececec;
+}
+
+.appUiKit-block .head h2 {
+	font-size: 16px;
+	line-height: 1.3em;
+}
+
+.appUiKit-block .head p {
+	margin-top: 4px;
+
+	color: rgba(100, 100, 100);
+}
+
+.appUiKit-block .content {
+	padding: 16px;
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "path": "catalogue\/([A-z0-9_-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/catalogue_single"
+    },
+    {
+        "path": "catalogue\/([A-z0-9_-]+)",
+        "rewrite": "\/catalogue_single"
+    },
+    {
+        "path": "watch\/([A-z0-9_-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/watch"
+    },
+    {
+        "path": "blog\/([A-z0-9_-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/single"
+    },
+    {
+        "path": "robots.txt",
+        "rewrite": "\/robots"
+    },
+    {
+        "path": "channel\/([A-z0-9\\-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/catalogue_single"
+    },
+    {
+        "path": "watch\/([A-z0-9\\-]+)\/([A-z0-9_-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/watch"
+    },
+    {
+        "path": "reading\/([A-z0-9\\-]+)\/([A-z0-9_-]+)\/([A-z0-9_-]+)",
+        "rewrite": "\/reading"
+    },
+    {
+        "path": "([A-z0-9\\-]+)\/short",
+        "rewrite": "\/url_short"
+    },
+    {
+        "path": "search\/([A-z0-9\\-]+)\/(.+)",
+        "rewrite": "\/search"
+    },
+    {
+        "path": "catalogue\/([A-z0-9_-]+)",
+        "rewrite": "\/catalogue_single"
+    },
+    {
+        "path": "switchAccount",
+        "rewrite": "\/switch_account"
+    }
+]

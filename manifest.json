@@ -1,0 +1,15 @@
+{
+    "name": "Dusta",
+    "short_name": "Dusta",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "https://ab1.floagg.com/asset/img/app_icon_Dusta.jpg",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}
