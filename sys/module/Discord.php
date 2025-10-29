@@ -5,7 +5,7 @@ class Discord {
 
 	private $discordAPi = "https://discord.com/api/v10/";
 
-	function __construct() {
+	function __construct($CMS) {
 		$this->botToken = $CMS->Config->applications->discord->token;
 	}
 

@@ -26,7 +26,7 @@ class Plugins
 				$value = str_replace('-', '', $value); // Suprime les tiré au espace..
 				if(!class_exists($value)) continue;
 				
-				$this->Class[$value] = new $value();
+				$this->Class[$value] = new $value($CMS);
 			}
 			else echo "Impossible de charger le plugin : ".$value;
 		}
