@@ -159,6 +159,8 @@ Veuillez contacter le propriétaire du dépôt pour plus d’informations à ce 
 
 * **Dépôt** : [https://github.com/is-omini/Omsy-Source](https://github.com/is-omini/Omsy-Source)
 * **Problèmes / Issues** : [https://github.com/is-omini/Omsy-Source/issues](https://github.com/is-omini/Omsy-Source/issues)
+* **Discord Server** : [https://discord.gg/mc7Tx89dsH](https://discord.gg/mc7Tx89dsH)
+* **Personnal Discord** : @is_omini
 
 ## 👤 Auteur
 
