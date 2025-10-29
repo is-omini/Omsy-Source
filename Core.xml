@@ -29,6 +29,9 @@
             <client></client>
             <secret></secret>
         </paypal>
-        <discord></discord>
+        <discord>
+            <token></token>
+            <guild></guild>
+        </discord>
     </applications>
 </configuration>

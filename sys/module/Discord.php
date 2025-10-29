@@ -1,12 +1,12 @@
 <?php
 class Discord {
-	private $botToken = "MTQzMjgzMTc2NTM4MjE3MjgwNA.GBNMMa.6bEK1V53ufMXq8yRi20oP6Zgd_6Nzl80wP2_n8";
-	private $guildId = "1286055330123354122";
+	private $botToken;
+	private $guildId;
 
 	private $discordAPi = "https://discord.com/api/v10/";
 
 	function __construct() {
-		$this->botToken = $CMS->Config->applications->discord;
+		$this->botToken = $CMS->Config->applications->discord->token;
 	}
 
 	public function addRole($userId, $roleId) {
