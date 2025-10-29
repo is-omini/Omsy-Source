@@ -13,7 +13,7 @@
         <version>1.0.1</version>
         <title>My website</title>
         <folder>default</folder>
-        <plugins></plugins>
+        <plugins>default</plugins>
     </template>
     <security>
         <eval>false</eval>
