@@ -5,7 +5,9 @@ class Discord {
 
 	private $discordAPi = "https://discord.com/api/v10/";
 
-	function __construct() {}
+	function __construct() {
+		$this->botToken = $CMS->Config->applications->discord;
+	}
 
 	public function addRole($userId, $roleId) {
 		$this->submit("guilds/{$this->guildId}/members/$userId/roles/$roleId", "PUT");
