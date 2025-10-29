@@ -1,0 +1,15 @@
+{
+    "name": "My app",
+    "short_name": "My app",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/asset/img/app_icon_Dusta.jpg",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	outline: none;
+}
+
+img, video, svg { display: block; }
+
+ul, ol { list-style: none; }
+
+svg {
+	color: inherit;
+	fill: inherit;
+}
+
+img.avatar-icon-img { border-radius: 16px; }
+img.app-icon-img { border-radius: 8px; }
+img.avatar-icon-img-round { border-radius: 100%; }
+
+a.reset-link { text-decoration: none; }
+
+a.button-ui-svg {
+	text-decoration: none;
+	display: block;
+
+	font-weight: 600;
+	color: var(--color-text);
+	fill: var(--color-text);
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+a.button-ui-svg:hover {
+	background-color: var(--color-white-hover);
+}
