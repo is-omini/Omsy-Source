@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+<<<<<<< HEAD
 	<omsy>
 		<version>1.0.3</version>
 	</omsy>
@@ -36,3 +37,40 @@
 		</discord>
 	</applications>
 </configuration>
+=======
+    <omsy>
+        <version>1.0.3</version>
+    </omsy>
+    <database>
+        <host>127.0.0.1</host>
+        <username></username>
+        <password></password>
+        <dbname></dbname>
+    </database>
+    <template>
+        <version>1.0.1</version>
+        <title>My website</title>
+        <folder>default</folder>
+        <plugins>defaults</plugins>
+    </template>
+    <security>
+        <eval>false</eval>
+        <exec>true</exec>
+        <system>false</system>
+        <passthru>false</passthru>
+    </security>
+    <server>
+        <privatekey></privatekey>
+    </server>
+    <applications>
+        <paypal>
+            <client></client>
+            <secret></secret>
+        </paypal>
+        <discord>
+            <token></token>
+            <guild></guild>
+        </discord>
+    </applications>
+</configuration>
+>>>>>>> 89c7a1c567a0986b041d84b8a42864d87725f014
