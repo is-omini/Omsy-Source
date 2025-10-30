@@ -18,9 +18,9 @@ class AppManifest {
 		)
 	);
 
-	public function getApplication() { return $this->application; }
+	public function get_application() { return $this->application; }
 
-	public function reandFile() {
+	public function reand_file() {
 		// Ouverture du fichier popur lire sont contenus
 		$getFileContent = file_get_contents($this->fileAccess);
 		$getFileContent = json_decode($getFileContent);
@@ -60,7 +60,7 @@ class AppManifest {
 		);
 	}
 
-	public function printFile() {
+	public function print_file() {
 		file_put_contents($this->fileAccess, json_encode($this->application));
 	}
 }

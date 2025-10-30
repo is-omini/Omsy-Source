@@ -173,6 +173,12 @@ Veuillez contacter le propriétaire du dépôt pour plus d’informations à ce 
 * Vérifiez les exigences de `.htaccess` pour une réécriture d’URL correcte
 * Passez en revue les paramètres de sécurité avant le déploiement en production
 
+* File name : ce_si_est_un_nom
+* Variable name : ceSiEstUnNom
+* File class name : CeSiEstUneClass
+* Variable class name : CeSiEstUneClass
+* Variable constance name : \_\_ce_si_est_une_constance\_\_
+
 ---
 
 **Dernière mise à jour** : basée sur les métadonnées du dépôt de **mai 2025**

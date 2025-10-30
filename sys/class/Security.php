@@ -55,7 +55,7 @@ class Security
 		return false;
 	}
 
-	public function Include($Path) : void {
+	public function include($Path) : void {
 		if(!$this->onc($Path)) exit(CMS->OHeader->DynamicHeaderError(404));
 	}
 }

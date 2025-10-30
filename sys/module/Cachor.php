@@ -1,5 +1,6 @@
 <?php
 class Cachor {
+	// Temp ????
 	private $CMS;
 
 	function __construct($CMS) {
@@ -7,7 +8,7 @@ class Cachor {
 	}
 
 
-	public function getCache($page) {
+	public function get_cache($page) {
 		// Recuperration de la page dans le CacheSQL
 		$chechCache = CMS->DataBase->execute('SELECT * FROM cachor_page WHERE page = ?', [$page])->fetchAll();
 		if(isset($chechCache[0])) $chechCache = $chechCache[0];
@@ -22,7 +23,7 @@ class Cachor {
 		return null;
 	}
 
-	public function insertCache($page, $content) {
+	public function insert_cache($page, $content) {
 		CMS->DataBase->execute(
 			'INSERT INTO cachor_page(page, content, reg) VALUES(?, ?, now())',
 			[$page, $content]

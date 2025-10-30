@@ -36,7 +36,7 @@ class GFunction {
         return html_entity_decode($string, ENT_QUOTES, 'UTF-8');
     }
 
-    public function isNotBot($str = null) {
+    public function is_bot($str = null) {
         $userAgent = $_SERVER['HTTP_USER_AGENT'];
         if(isset($str)) $userAgent = $str;
 
@@ -44,7 +44,7 @@ class GFunction {
         return false;
     }
 
-    public function getIp(){
+    public function get_ip(){
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             $ip = $_SERVER['HTTP_CLIENT_IP'];
         }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
@@ -55,7 +55,7 @@ class GFunction {
         return $ip;
     }
 
-    public function getAgent() {
+    public function get_agent() {
         return $_SERVER['HTTP_USER_AGENT'];
     }
 
@@ -73,7 +73,7 @@ class GFunction {
         return true;
     }
 
-    public function convertirDate($datetimeStr) {
+    public function convert_date($datetimeStr) {
     if (!$datetimeStr) return "Date vide";
 
     // Création de l'objet DateTime avec fuseau Europe/Paris

@@ -38,7 +38,7 @@ class OHeader {
 		]
 	];
 
-	public function DynamicHeaderError($errCode, $errorPrecision = null) {
+	public function dynamic_header_error($errCode, $errorPrecision = null) {
 		if(isset($errorPrecision) && !empty($errorPrecision)) $this->errorPrecision = $errorPrecision;
 
 		header("HTTP/1.1 ".$this->headerError[intval($errCode)]['code'].' '.$this->headerError[intval($errCode)]['msg']);

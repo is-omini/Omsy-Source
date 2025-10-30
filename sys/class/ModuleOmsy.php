@@ -13,8 +13,9 @@ class ModuleOmsy
 			if(in_array($value, ['.', '..'])) continue;
 
 			$basename = pathinfo(__root__.'/'.$CMS->Path->SysModule.'/'.$value, PATHINFO_FILENAME);
+			if(empty($basename)) continue;
 
-			$CMS->addModule($basename);
+			//$CMS->addModule($basename);
 		}
 	}
 }

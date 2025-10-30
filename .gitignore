@@ -24,6 +24,7 @@
 
 /sys/.DS_Store
 /sys/class.old/
+/sys/module.old/
 
 /usr/.DS_Store
 /usr/template/.DS_Store
@@ -38,3 +39,4 @@
 /usr/plugins/omsyPanel
 /usr/plugins/omsyBlog
 /usr/plugins/minBlog
+/usr/plugins/ennModule

@@ -1,5 +1,8 @@
 <?php
 class Snapshot {
+	// Temp ????
+	// 40% ChatGPT ????
+
     public $CMS;
     private $config;
     private $devMode = false;

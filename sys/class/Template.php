@@ -93,43 +93,43 @@ class Template
 
 
 		// Gestion du panel admin
-		if($this->ArrayPath[0] == $CMS->PathDefintionString->RootAdministatorDashboard) $this->panelRoot();
+		if($this->ArrayPath[0] == $CMS->PathDefintionString->RootAdministatorDashboard) $this->panel_root();
 
 		// Gestion de l'api interne
-		else if($this->ArrayPath[0] == $CMS->PathDefintionString->RootApplicationProgrammingInterface) $this->apiRoot();
+		else if($this->ArrayPath[0] == $CMS->PathDefintionString->RootApplicationProgrammingInterface) $this->api_root();
 
-		else if($this->ArrayPath[0] == "plugin") $this->plugRoot();
+		else if($this->ArrayPath[0] == "plugin") $this->plug_root();
 
 		// Gestion des page web
-		else $this->webRoot();
+		else $this->web_root();
 	}
 
-	private function apiRoot() {
-		$this->CMS->setAccess(1);
+	private function api_root() {
+		$this->CMS->set_access(1);
 
 		if(file_exists("./share/".$this->StrPath.".php")) {
-			$this->CMS->Security->Include(Path:"share/".$this->StrPath.".php");
+			$this->CMS->Security->include(Path:"share/".$this->StrPath.".php");
 		} else if (file_exists("./usr/plugins/".$this->ArrayPath[1]."/api/".$this->ArrayPath[2].".php")) {
-			$this->CMS->Security->Include(Path:"./usr/plugins/".$this->ArrayPath[1]."/api/".$this->ArrayPath[2].".php");
-		} else exit(CMS->OHeader->DynamicHeaderError('404'));
+			$this->CMS->Security->include(Path:"./usr/plugins/".$this->ArrayPath[1]."/api/".$this->ArrayPath[2].".php");
+		} else exit(CMS->OHeader->dynamic_header_error('404'));
 	}
 
-	private function panelRoot() {
-		$this->CMS->setAccess(3);
+	private function panel_root() {
+		$this->CMS->set_access(3);
 
 		if($this->CMS->SessionOmsy->GetRole() >= 2) {
-			if($this->verifMime($this->StrPath)) {
-				if ($this->TryLoadFile($this->StrPath)) exit();
+			if($this->verif_mime($this->StrPath)) {
+				if ($this->try_load_file($this->StrPath)) exit();
 			}
 
-			if(file_exists($this->StrPath.'.php')) $this->CMS->Security->Include($this->StrPath.".php");
+			if(file_exists($this->StrPath.'.php')) $this->CMS->Security->include($this->StrPath.".php");
 			else exit('Echec opening / '.$this->StrPath);
 		}
 		else exit('Echec opening / '.$this->StrPath);
 	}
 
-	private function plugRoot() {
-		$this->CMS->setAccess(2);
+	private function plug_root() {
+		$this->CMS->set_access(2);
 
 		$arrayRoot = explode('/', $this->StrPath);
 		unset($arrayRoot[0]);
@@ -139,37 +139,37 @@ class Template
 
 		$newRoot = implode('/', $arrayRoot);
 
-		if($this->verifMime(__root__.'usr/plugins/'.$pluginName.'/'.$newRoot)) {
-			if ($this->TryLoadFile(__root__.'usr/plugins/'.$pluginName.'/'.$newRoot)) exit();
+		if($this->verif_mime(__root__.'usr/plugins/'.$pluginName.'/'.$newRoot)) {
+			if ($this->try_load_file(__root__.'usr/plugins/'.$pluginName.'/'.$newRoot)) exit();
 		}
 
 		if(file_exists('usr/plugins/'.$pluginName.'/'.$newRoot.'.php')) {
-			$this->CMS->Security->Include('usr/plugins/'.$pluginName.'/'.$newRoot.'.php');
+			$this->CMS->Security->include('usr/plugins/'.$pluginName.'/'.$newRoot.'.php');
 		}
 		else exit('Echec opening / '.'usr/plugins/'.$pluginName.'/'.$newRoot.'.php');
 	}
 
-	private function webRoot() {
-		$this->CMS->setAccess(0);
+	private function web_root() {
+		$this->CMS->set_access(0);
 
-		$this->CMS->DataBase->execute('INSERT INTO omsy_viewpage(useragent, userip, page, date_time) VALUES(?,?,?,now())', [$_SERVER['HTTP_USER_AGENT'], $this->CMS->GFunction->getIp(), $this->StrPath]);
+		$this->CMS->DataBase->execute('INSERT INTO omsy_viewpage(useragent, userip, page, date_time) VALUES(?,?,?,now())', [$this->CMS->GFunction->get_agent(), $this->CMS->GFunction->get_ip(), $this->StrPath]);
 		
 		//echo $this->StrPath;
 
-		if($this->verifMime($this->StrPath)) {
-			if ($this->TryLoadFile($this->StrPath)) exit();
+		if($this->verif_mime($this->StrPath)) {
+			if ($this->try_load_file($this->StrPath)) exit();
 		}
 
 		$Permission = $this->LoadPerm("usr/template/".$this->TemplateID."/prm.json");
 		if ($Permission === null) exit('Permission load error');
 
-		if ($this->TryLoadFile("usr/template/".$this->TemplateID."/".$this->StrPath)) return;
+		if ($this->try_load_file("usr/template/".$this->TemplateID."/".$this->StrPath)) return;
 
 		else {
 			if(isset($Permission[$this->StrPath])) {
 				if ($this->CMS->Permission->can(OmsyPRM->OPEN, $Permission[$this->StrPath])){
 				//if (in_array($this->CMS->SessionOmsy->GetRole(), $Permission[$this->StrPath])){
-					$this->CMS->Security->Include("usr/template/".$this->TemplateID."/".$this->StrPath.".php");
+					$this->CMS->Security->include("usr/template/".$this->TemplateID."/".$this->StrPath.".php");
 					return;
 				}
 			}
@@ -188,10 +188,10 @@ class Template
 			if(isset($Permission[$this->StrPath])) {
 				if ($this->CMS->Permission->can(OmsyPRM->OPEN, $Permission[$this->StrPath])){
 				//if (in_array($this->CMS->SessionOmsy->GetRole(), $Permission[$this->StrPath])){
-					$this->CMS->Security->Include("usr/template/".$this->TemplateID."/".$this->StrPath.".php");
+					$this->CMS->Security->include("usr/template/".$this->TemplateID."/".$this->StrPath.".php");
 					return;
-				} else exit(var_dump($this->CMS->Permission->can(OmsyPRM->OPEN, $this->CMS->SessionOmsy->GetRole())));// CMS->OHeader->DynamicHeaderError('403'));
-			} else exit(CMS->OHeader->DynamicHeaderError('404'));
+				} else exit(var_dump($this->CMS->Permission->can(OmsyPRM->OPEN, $this->CMS->SessionOmsy->GetRole())));// CMS->OHeader->dynamic_header_error('403'));
+			} else exit(CMS->OHeader->dynamic_header_error('404'));
 		}
 	}
 
@@ -200,7 +200,7 @@ class Template
 		return json_decode(file_get_contents($Path), true);
 	}
 
-	private function verifMime($pathFull) {
+	private function verif_mime($pathFull) {
 		foreach ($this->Mime as $key => $value) {
 			if(str_contains($pathFull, ".$key")) {
 				
@@ -214,7 +214,7 @@ class Template
 		return false;
 	}
 
-	private function TryLoadFile($Path){
+	private function try_load_file($Path){
 		if (file_exists($Path)){
 			$extention = pathinfo($Path, PATHINFO_EXTENSION);
 			//var_dump($this->Mime[$extention]);

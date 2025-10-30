@@ -23,8 +23,8 @@ class CMS
 	 * 2 : PlugRoot /usr/plugins/plugin-user/
 	 * 3 : adminRoot /panel/
 	 */
-	public function setAccess(int $str) { $this->getAccess = $str; }
-	public function getAccess() { return $this->getAccess; }
+	public function set_access(int $str) { $this->getAccess = $str; }
+	public function get_access() { return $this->getAccess; }
 
 	function __construct()
 	{

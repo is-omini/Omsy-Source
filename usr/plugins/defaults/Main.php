@@ -1,5 +1,7 @@
 <?php
 class defaults {
+	private $CMS;
+	
 	private $welcome = [
 	    "Welcome",
 	    "Bienvenue",
@@ -92,6 +94,11 @@ class defaults {
 	    "ආයුබෝවන්",
 	    "स्वागत आहे"
 	];
+
+	public function __construct($CMS) {
+		$this->CMS = $CMS;
+		$CMS->addModule("SqlInstall");
+	}
 
 	public function getWelcomes() { return $this->welcome; }
 	public function getWallpapers() {

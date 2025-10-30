@@ -1,5 +1,6 @@
 <?php
 class Discord {
+	// Temp ????
 	private $botToken;
 	private $guildId;
 
