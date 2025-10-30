@@ -5,15 +5,15 @@
     </omsy>
     <database>
         <host>127.0.0.1</host>
-        <username>root</username>
-        <password/>
-        <dbname>eiganoneko_sql</dbname>
+        <username></username>
+        <password></password>
+        <dbname></dbname>
     </database>
     <template>
-        <version>2.0.3-alpha</version>
-        <title>Eiga No Neko - Streaming d'animes en VO et VOST</title>
-        <folder>eiganoneko.com</folder>
-        <plugins>omsyPanel, omsyBlog, omsyPage, ennNode</plugins>
+        <version>1.0.1</version>
+        <title>My website</title>
+        <folder>default</folder>
+        <plugins>defaults</plugins>
     </template>
     <security>
         <eval>false</eval>
@@ -22,14 +22,13 @@
         <passthru>false</passthru>
     </security>
     <server>
-        <privatekey/>
-        <update>https://static.floagg.com/publish-dev/</update>
+        <privatekey></privatekey>
     </server>
     <applications>
         <paypal>
-            <client>Af-hvjx-2GpWK6P_H5lW_vU2-kn4Gd2WGMyOZep98VL9zMpc3xeHnxeA_Udg82VBniWWQ6TV-HDJP-aX</client>
-            <secret>EPdom3VamJcDG2pvBUQXzy4pGbiHdgo1kUiJ7CMAeZYAJsFPzpjDoYagIC-K3Im3XtF-KpwCxI5yTV20</secret>
+            <client></client>
+            <secret></secret>
         </paypal>
-        <discord>MTQzMjgzMTc2NTM4MjE3MjgwNA.Ggy2_S.hNGIFXxpvDpydVREhA3DccIX5ZlDaNFbVkz8II</discord>
+        <discord></discord>
     </applications>
 </configuration>
